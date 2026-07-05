@@ -26,6 +26,8 @@
 #include "std_msgs/Bool.h"
 #include "ros_gpio_control/gpio.h"
 
+#include <iostream>
+
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "hall_sensor");
@@ -47,5 +49,6 @@ int main(int argc, char **argv)
     ros::spinOnce();
     loop_rate.sleep();
   }
+  std::cout << "This is my project" << std::endl;
   return 0;
 }
